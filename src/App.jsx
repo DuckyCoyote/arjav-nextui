@@ -1,49 +1,52 @@
 import React from 'react';
 
-import NavBar from './components/navbar/navbar.component';
-
 import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
+
+import NavBar from './components/navbar/navbar.component';
+import shampoo from './assets/shampoo.webp';
+
+import './App.css'
 
 export default function App() {
   const list = [
     {
       title: 'Orange',
-      img: '/images/fruit-1.jpeg',
+      img: shampoo,
       price: '$5.50',
     },
     {
       title: 'Tangerine',
-      img: '/images/fruit-2.jpeg',
+      img: shampoo,
       price: '$3.00',
     },
     {
       title: 'Raspberry',
-      img: '/images/fruit-3.jpeg',
+      img: shampoo,
       price: '$10.00',
     },
     {
       title: 'Lemon',
-      img: '/images/fruit-4.jpeg',
+      img: shampoo,
       price: '$5.30',
     },
     {
       title: 'Avocado',
-      img: '/images/fruit-5.jpeg',
+      img: shampoo,
       price: '$15.70',
     },
     {
       title: 'Lemon 2',
-      img: '/images/fruit-6.jpeg',
+      img: shampoo,
       price: '$8.00',
     },
     {
       title: 'Banana',
-      img: '/images/fruit-7.jpeg',
+      img: shampoo,
       price: '$7.50',
     },
     {
       title: 'Watermelon',
-      img: '/images/fruit-8.jpeg',
+      img: shampoo,
       price: '$12.20',
     },
   ];
@@ -51,7 +54,82 @@ export default function App() {
   return (
     <div className="">
       <NavBar />
-      <div className="gap-2 grid grid-cols-2 sm:grid-cols-3 max-w-screen-md mx-auto">
+
+      <div class="carousel mt-0 p-0">
+        <div class="carousel-inner">
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-1"
+            name="carousel"
+            aria-hidden="true"
+            hidden
+            checked="checked"
+          />
+          <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without" />
+          </div>
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-2"
+            name="carousel"
+            aria-hidden="true"
+            hidden
+          />
+          <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript" />
+          </div>
+          <input
+            class="carousel-open"
+            type="radio"
+            id="carousel-3"
+            name="carousel"
+            aria-hidden="true"
+            hidden
+          />
+          <div class="carousel-item">
+            <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel" />
+          </div>
+          <label for="carousel-3" class="carousel-control prev control-1">
+            ‹
+          </label>
+          <label for="carousel-2" class="carousel-control next control-1">
+            ›
+          </label>
+          <label for="carousel-1" class="carousel-control prev control-2">
+            ‹
+          </label>
+          <label for="carousel-3" class="carousel-control next control-2">
+            ›
+          </label>
+          <label for="carousel-2" class="carousel-control prev control-3">
+            ‹
+          </label>
+          <label for="carousel-1" class="carousel-control next control-3">
+            ›
+          </label>
+          <ol class="carousel-indicators">
+            <li>
+              <label for="carousel-1" class="carousel-bullet">
+                •
+              </label>
+            </li>
+            <li>
+              <label for="carousel-2" class="carousel-bullet">
+                •
+              </label>
+            </li>
+            <li>
+              <label for="carousel-3" class="carousel-bullet">
+                •
+              </label>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div className="mt-10 gap-2 grid grid-cols-2 sm:grid-cols-3 max-w-screen-md mx-auto">
         {list.map((item, index) => (
           <Card
             shadow="sm"
