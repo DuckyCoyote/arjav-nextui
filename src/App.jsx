@@ -5,7 +5,7 @@ import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import NavBar from './components/navbar/navbar.component';
 import shampoo from './assets/shampoo.webp';
 
-import './App.css'
+import './App.css';
 
 export default function App() {
   const list = [
@@ -55,7 +55,7 @@ export default function App() {
     <div className="">
       <NavBar />
 
-      <div class="carousel mt-0 p-0">
+      {/* <div class="carousel mt-0 p-0">
         <div class="carousel-inner">
           <input
             class="carousel-open"
@@ -126,6 +126,27 @@ export default function App() {
               </label>
             </li>
           </ol>
+        </div>
+      </div> */}
+
+      <div className="carousel-container">
+        <div className="carousel images">
+          <div className="carouse-item">Image 1</div>
+        </div>
+        <div className="carousel-control">
+          <div className="top">
+            <div className="left">
+              <button>‹</button>
+            </div>
+            <div className="right">
+              <button>›</button>
+            </div>
+          </div>
+          <div className="bottom">
+            <span> • </span>
+            <span> • </span>
+            <span> • </span>
+          </div>
         </div>
       </div>
 
